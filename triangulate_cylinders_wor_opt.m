@@ -22,6 +22,9 @@ C0 = zeros(4);
 C0([1 3 4],[1 3 4]) = c0;
 
 % transform to original coordinate system
+Tp = data.Tp;
+Tcam = data.Tcam;
+
 C = Tp'*C0*Tp;
 VP = Tcam*[0 1 0 0]';
 
